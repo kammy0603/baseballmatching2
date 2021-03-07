@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>草野球パーク</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+<%= render "shared/header" %>
+<div class='main'>
+
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      仲間を集めて野球やろうぜ！
+    </h2>
+    <p class='service-explain'>
+      草野球パークは草野球のメンバーや助っ人、チームを簡単に探すことができるアプリです
+    </p>
+    <p class='service-explain'>
+
+    </p>
+    <div class='store-btn'>
+      <%#= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+      <%#= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+    </div>
+  </div>
+ 
+  <div class='select-reason-contents'>
+    <h2 class='title'>
+      草野球パークで出来ること
+    </h2>
+    <ul class='reason-lists'>
+      <li class='list'>
+        <%= image_tag "img-baseball-slide2.png", class:"list-pict" %>
+        <span class='reason-list-number'>1</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>助っ人やメンバーを探せる</span>
+          
+        </h3>
+        <p class='reason-list-description'>
+          サイトに登録されたメンバーを探してメンバー勧誘ができる
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "img-baseball-slide3.jpg", class:"list-pict" %>
+        <span class='reason-list-number'>2</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>参加したいチームを探せる</span>
+
+        </h3>
+        <p class='reason-list-description'>
+         練習試合相手に困っていたら、サイトに登録されたチームに試合の打診ができる
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "img-baseball-slide.jpg", class:"list-pict" %>
+        <span class='reason-list-number'>3</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>試合相手を探せる</span>
+        </h3>
+        <p class='reason-list-description'>
+          練習試合相手に困っていたら、サイトに登録されたチームに試合の打診ができる
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /FURIMAが選ばれる3つの理由部分 %>
+
+  <%# FURIMAの特徴 %>
+  <div class='feature-contents'>
+    <h2 class='title'>
+      草野球パークの機能
+    </h2>
+    <ul class='feature-lists'>
+      <li class='list2'>
+        <%#= link_to(users_index_path, class: 'purchase-btn') do %>
+        <h3 class='feature-list-text'>
+          メンバー・助っ人を探す
+        </h3>
+        <%# end %>
+        <p class='feature-list-description'>
+        </p>
+
+      </li>
+      <li class='list3'>
+        <%#= link_to(teams_list_path, class: 'purchase-btn') do %>
+        <h3 class='feature-list-text'>
+          チームを探す
+        </h3>
+        <%# end %>
+        <p class='feature-list-description'>
+
+        </p>
+      </li>
+      <li class='list4'>
+        <%#= link_to('#', class: 'purchase-btn') do %>
+        <h3 class='feature-list-text'>
+          試合相手を探す
+        </h3>
+        <%# end %>
+        <p class='feature-list-description'>
+
+        </p>
+      </li>
+    </ul>
+  </div>
+
+<div class="chatroom">
+  <div class="chatroom-btn">
+   <span class='chatroom-btn-text'>チャットルームを開く</span>
+  </div>
+</div>
+<%#= link_to(#, class: 'purchase-btn') do %>
+ 
+  <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<%# end %>
+<%= render "shared/footer" %>
+</body>
+</html>
