@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(version: 2021_03_07_085307) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.string "name_kana"
+    t.date "birthday"
+    t.integer "term_id"
+    t.integer "level_id"
+    t.integer "frequency_id"
+    t.integer "registration_id"
+    t.integer "prefecture_id"
+    t.string "city"
+    t.string "achievement"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
