@@ -1,0 +1,22 @@
+<h1>
+  検索結果
+</h1>
+<%# 検索結果の個数で条件分岐 %>
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+  <%= image_tag result.avatar%>
+    <td>
+    <br>
+    <li>
+      <%= result.name %>
+      <%= result.term.name %>
+      <%= result.level.name %>
+      <%= result.frequency.name %>
+      <%= result.prefecture.name %>
+    </li>
+  <% end %>
+<% else %>
+  該当する商品はありません
+<% end %>
+<br>
+<%= link_to 'トップページへ戻る', root_path %>

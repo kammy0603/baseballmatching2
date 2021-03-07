@@ -11,7 +11,6 @@
 .form-wrap {
   width: 50%;
   background-color: white;
-  padding-bottom: 200px;
 }
 
 .form-header {
@@ -32,7 +31,14 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-top: 20px;
+}
+
+.form-block {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: -400px;
 }
 
 .form-group:first-child {
@@ -203,7 +209,6 @@
 }
 
 .click-upload {
-  margin-top: -15px;
   margin-left: 170px;
 }
 
@@ -212,12 +217,12 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-top: 410px;
 }
 
 .weight-bold-text2 {
   font-weight: bold;
   font-size: 14px;
   margin-left:170px ;
+  margin-top: 20px;
 }
 
