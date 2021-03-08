@@ -2,32 +2,62 @@
   メンバー・助っ人検索
 </h1>
 <%= search_form_for @p, url: users_search_path do |f| %>
-  <%= f.label :term_id_eq, '野球歴' %>
-  <%= f.collection_select :term_id_eq, Term.all, :id, :name,  include_blank: '指定なし' %>
-    <%= f.label :level_id_eq, '希望する野球レベル ' %>
-  <%= f.collection_select :level_id_eq, Level.all, :id, :name,  include_blank: '指定なし' %>
-    <%= f.label :frequency_id_eq, '希望活動頻度' %>
-  <%= f.collection_select :frequency_id_eq, Frequency.all, :id, :name,  include_blank: '指定なし' %>
-    <%= f.label :prefecture_id_eq, '都道府県' %>
-  <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name,  include_blank: '指定なし' %>
-  <br>
-  <%= f.submit '検索' %>
-   <br>
-  <%# 商品一覧 %>
+<div class="search-form">
+  <div class="search-group">
+   <div class="search-block">
+    <div class="search-content">
+      <%= f.label :term_id_eq, '野球歴' %>
+      <%= f.collection_select :term_id_eq, Term.all, :id, :name,  include_blank: '指定なし' %>
+    </div>
+    <div class="search-content">
+      <%= f.label :level_id_eq, '希望する野球レベル'%>
+      <%= f.collection_select :level_id_eq, Level.all, :id, :name,  include_blank: '指定なし' %>
+    </div>
+   </div>
+   <div class="search-block">
+    <div class="search-content">
+      <%= f.label :frequency_id_eq, '希望活動頻度' %>
+      <%= f.collection_select :frequency_id_eq, Frequency.all, :id, :name,  include_blank: '指定なし' %>
+    </div>
+    <div class="search-content">
+      <%= f.label :prefecture_id_eq, '都道府県' %>
+      <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name,  include_blank: '指定なし' %>
+    </div>
+    </div>
+  </div>
+  <div class="search-button">
+      <%= f.submit '検索' %>
+  </div>
+</div>
+
+  <div class="sub-title">検索一覧</div>
+  <div class="list-index">
   <% @users.each do |user| %>
   <div class='list'>
   <%= link_to user_path(user.id) , method: :get do %>
-  <td>
-  <br>
-  <li class="member-index">
+
+  <div class="member-index">
     <%= image_tag user.avatar , class: "item-img" %>
-    <%= user.name %>
-    <%= user.term.name %>
-    <%= user.level.name %>
-    <%= user.frequency.name %>
-    <%= user.prefecture.name %>
-  </li>
+    <div class="member-group">
+      <div class="menmber-detail">
+      <%= user.name %>
+      </div>
+      <div class="menmber-detail">
+      <%= user.term.name %>
+      </div>
+      <div class="menmber-detail">
+      <%= user.level.name %>
+      </div>
+      <div class="menmber-detail">
+      <%= user.frequency.name %>
+      </div>
+      <div class="menmber-detail">
+      <%= user.prefecture.name %>
+      </div>
+    </div>
+  </div>
   <% end %>
   </div>
   <% end %>
+  </div>
 <% end %>
