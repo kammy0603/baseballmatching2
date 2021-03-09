@@ -37,11 +37,13 @@
 }
 
 .sub-title {
-  color: blue;
+  color: black;
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
   margin-top: 10px;
+  margin-left: 70px;
+  border-bottom: 1px solid black;
+  width: 90%;
 }
 
 
@@ -49,10 +51,10 @@
 float: left;
 width: 300px;
 margin-top: 20px;
-margin-left: 50px;
+margin-left: 70px;
 }
 
-.team-index {
+.member-index {
   width: 100px;
   list-style: none;
 }
@@ -60,22 +62,18 @@ margin-left: 50px;
 .item-img {
   width: 25vh;
   height: 25vh;
-  margin-left: 20px;
 }
 
 .member-index {
   width: 500px;
 }
 
-.team-info {
-  margin-left: 40px;
-}
-
 .member-group {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
-.menmber-detail {
+.member-detail {
   color: black;
+  font-size: 12px;
 }
 

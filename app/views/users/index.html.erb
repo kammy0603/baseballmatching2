@@ -37,21 +37,21 @@
   <%= link_to user_path(user.id) , method: :get do %>
 
   <div class="member-index">
-    <%= image_tag user.avatar , class: "item-img" %>
+    <%= image_tag user.avatar, class: "item-img" %>
     <div class="member-group">
-      <div class="menmber-detail">
+      <div class="member-detail">
       <%= user.name %>
       </div>
-      <div class="menmber-detail">
+      <div class="member-detail">
       <%= user.term.name %>
       </div>
-      <div class="menmber-detail">
+      <div class="member-detail">
       <%= user.level.name %>
       </div>
-      <div class="menmber-detail">
+      <div class="member-detail">
       <%= user.frequency.name %>
       </div>
-      <div class="menmber-detail">
+      <div class="member-detail">
       <%= user.prefecture.name %>
       </div>
     </div>
