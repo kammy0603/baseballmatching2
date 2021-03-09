@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     @user = User.where(category_id: params[:id]).order('created_at DESC')
   end
 
+  def new
+   @user = User.new
+  end
+
   def search
     @results = @p.result
   end

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'
    }
-  get 'temas/top'
+  get 'teams/top'
+  get 'teams/index'
+  get 'teams/search'
   get 'users/search'
   root to: 'teams#top'
   resources :users do

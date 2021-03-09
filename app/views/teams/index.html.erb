@@ -1,0 +1,33 @@
+<h1>
+  チーム検索
+</h1>
+<%= search_form_for @p, url: teams_search_path do |f| %>
+  <%= f.label :prefecture_id_eq, '活動中の都道府県' %>
+  <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name,  include_blank: '指定なし' %>
+    <%= f.label :age_id_eq, 'メンバーの平均年齢' %>
+  <%= f.collection_select :age_id_eq, Age.all, :id, :name,  include_blank: '指定なし' %>
+    <%= f.label :frequency_id_eq, '希望活動頻度' %>
+  <%= f.collection_select :frequency_id_eq, Frequency.all, :id, :name,  include_blank: '指定なし' %>
+    <%= f.label :level_id_eq, '希望するレベル' %>
+  <%= f.collection_select :level_id_eq, Level.all, :id, :name,  include_blank: '指定なし' %>
+  <br>
+  <%= f.submit '検索' %>
+   <br>
+  <%# 商品一覧 %>
+  <% @teams.each do |team| %>
+  <div class='list'>
+  <%= link_to user_team_path(team.id) , method: :get do %>
+  <td>
+  <br>
+  <li class="member-index">
+    <%= image_tag team.teamimage , class: "item-img" %>
+    <%= team.teamname %>
+    <%= team.prefecture.name %>
+    <%= team.age.name %>
+    <%= team.frequency.name %>
+    <%= team.level.name %>
+  </li>
+    <% end %>
+  </div>
+  <% end %>
+<% end %>
